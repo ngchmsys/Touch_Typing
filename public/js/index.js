@@ -117,11 +117,14 @@ const app = new Vue({
             this.finished = true;
         },
         countdown: function() {
-            if(this.timeout/1000 == this.count_time) {
+            if(this.isTimeup()) {
                 this.timeup();
             } else {
                 this.count_time += 1;
             }
+        },
+        isTimeup: function() {
+            return if(this.timeout/1000 == this.count_time);
         },
         timeup: function() {
             clearInterval(this.counter);
