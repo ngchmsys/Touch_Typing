@@ -124,7 +124,7 @@ const app = new Vue({
             }
         },
         isTimeup: function() {
-            return if(this.timeout/1000 == this.count_time);
+            return (this.timeout/1000 == this.count_time);
         },
         timeup: function() {
             clearInterval(this.counter);
